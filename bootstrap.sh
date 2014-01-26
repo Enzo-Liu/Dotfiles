@@ -34,7 +34,7 @@ link_files () {
 install_dotfiles () {
   info 'installing dotfiles'
 
-  for source in $(ls -l |grep -v "bootstrap.sh"| awk '{print $9}')
+  for source in $(ls -l |grep -v "bootstrap.sh"|grep -v "README.md"| awk '{print $9}')
   do
     source="$DOTFILES_ROOT/`basename \"${source}\"`"
     dest="$HOME/.`basename \"${source}\"`"
