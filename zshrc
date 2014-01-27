@@ -69,7 +69,8 @@ alias stgp="grunt compress;grunt dpm-server;"
 alias pg_start="pg_ctl start -D $pg_home/data -l $pg_home/log.log"
 
 alias pg_stop="pg_ctl stop -D $pg_home/data"
-
+alias ta="tmux attach"
+alias server="python -m SimpleHTTPServer"
 #生成tags
 alias tag="ctags -R "
 
