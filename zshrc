@@ -76,6 +76,7 @@ alias tag="ctags -R "
 
 #默认后缀的处理
 alias -s log=vi
+alias -s c=vi
 alias -s rb=vi
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
