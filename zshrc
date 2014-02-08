@@ -73,6 +73,7 @@ alias ta="tmux attach"
 alias server="python -m SimpleHTTPServer"
 #生成tags
 alias tag="ctags -R "
+alias vi="vim"
 
 #默认后缀的处理
 alias -s log=vi

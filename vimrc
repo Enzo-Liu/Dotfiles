@@ -66,6 +66,7 @@ filetype plugin indent on
 set ofu=syntaxcomplete#Complete
 autocmd FileType ruby map <leader>r :!ruby %<CR>
 autocmd FileType ruby set shiftwidth=2 | set expandtab
+autocmd FileType lisp map <leader>r :!clisp %<CR>
 autocmd FileType python map <leader>r :!python %<CR>
 autocmd FileType javascript map <leader>r :!node %<CR>
 autocmd FileType yaml set shiftwidth=2 | set expandtab
@@ -172,6 +173,9 @@ map <leader>t :TlistToggle<CR>
 
 " Fugitive
 map <leader>gd :Gdiff<CR>
+
+" YCM--youCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 " for html5
 " Disable event-handler attributes support:
