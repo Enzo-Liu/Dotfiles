@@ -49,7 +49,7 @@ set fenc=utf-8 enc=utf-8 tenc=utf-8
 set hidden
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
 "so the long line wont make vim slow
-set synmaxcol=120
+set synmaxcol=256
 " Disable error bells
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
