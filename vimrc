@@ -78,7 +78,6 @@ map <F3> :bp <CR>
 map <F4> :bn <CR>
 map <PageUp> :bp <CR>
 map <PageDown> :bn <CR>
-au BufWritePost *.coffee silent CoffeeMake! -b -o /tmp | cwindow | redraw!
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 au BufNewFile,BufRead Capfile	setf ruby
 augroup filetype
