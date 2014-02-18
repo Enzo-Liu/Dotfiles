@@ -48,6 +48,7 @@ set fencs=utf-8,gbk,big5,euc-jp,shift-jis,utf-16le
 set fenc=utf-8 enc=utf-8 tenc=utf-8
 set hidden
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
+set foldmethod=marker
 "so the long line wont make vim slow
 set synmaxcol=256
 " Disable error bells
@@ -163,14 +164,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-
 map <leader>b :CtrlPBuffer<CR>
 
 
-"TagList
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Process_File_Always=1
-map <leader>t :TlistToggle<CR>
+"Tagbar
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+map <leader>t :TagbarToggle<CR>
 
 " Fugitive
 map <leader>gd :Gdiff<CR>
