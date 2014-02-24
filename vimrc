@@ -55,6 +55,10 @@ set synmaxcol=256
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
+
 "设置不生成swap文件
 set noswf
 set cursorline
