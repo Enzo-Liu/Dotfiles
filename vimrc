@@ -37,8 +37,6 @@ set guioptions-=T
 set ruler
 set hlsearch
 set autoread
-"to share the clipboard with mac os x
-set clipboard=unnamed
 set incsearch
 set shiftwidth=2
 set tabstop=2
