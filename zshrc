@@ -77,6 +77,8 @@ alias vi="vim"
 
 #默认后缀的处理
 alias -s log=vi
+alias -s lisp=vi
+alias -s cpp=vi
 alias -s c=vi
 alias -s rb=vi
 alias -s gz='tar -xzvf'
