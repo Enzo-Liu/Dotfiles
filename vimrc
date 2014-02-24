@@ -178,6 +178,9 @@ map <leader>gd :Gdiff<CR>
 " YCM--youCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
+" Syntastic
+let g:syntastic_ignore_files = ['^.*ba-tgplatform.*\.java$'] 
+
 " for html5
 " Disable event-handler attributes support:
 " let g:html5_event_handler_attributes_complete = 0
