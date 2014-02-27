@@ -59,6 +59,9 @@ if $TMUX == ''
   set clipboard+=unnamed
 endif
 
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
+
 "设置不生成swap文件
 set noswf
 set cursorline
@@ -79,7 +82,7 @@ autocmd FileType yaml set shiftwidth=2 | set expandtab
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1 
+let g:miniBufExplModSelTarget = 1
 map <F3> :bp <CR>
 map <F4> :bn <CR>
 map <PageUp> :bp <CR>
@@ -179,7 +182,7 @@ map <leader>gd :Gdiff<CR>
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 " Syntastic
-let g:syntastic_ignore_files = ['^.*ba-tgplatform.*\.java$'] 
+let g:syntastic_ignore_files = ['^.*ba-tgplatform.*\.java$']
 
 " for html5
 " Disable event-handler attributes support:
