@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 ulimit -n 1024
 
 export PATH="/Users/liuenze/.rvm/gems/ruby-2.0.0-p353/bin:/Users/liuenze/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/liuenze/.rvm/rubies/ruby-2.0.0-p353/bin:/Users/liuenze/.rvm/bin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/Users/liuenze/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
+export PATH=$PATH:"/usr/local/Cellar/ruby/2.0.0-p353/bin/"
 export EDITOR=vi
 export M2_HOME=$HOME/Work/apache-maven-3.1.1
 export M2=$M2_HOME/bin
