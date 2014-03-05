@@ -67,7 +67,7 @@ alias la="pwd;ls -al"
 alias mysql_start="sudo /usr/local/mysql/bin/mysqld_safe &!"
 alias mysql_stop="sudo pkill -9 -f mysql "
 alias stgp="grunt compress;grunt dpm-server;"
-
+export JAVA_HOME=$(/usr/libexec/java_home)
 alias pg_start="pg_ctl start -D $pg_home/data -l $pg_home/log.log"
 
 alias pg_stop="pg_ctl stop -D $pg_home/data"
