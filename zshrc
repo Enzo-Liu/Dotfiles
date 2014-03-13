@@ -45,7 +45,7 @@ ZSH_THEME="ys"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git textmate ruby)
+plugins=(git textmate ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,9 +53,8 @@ source $ZSH/oh-my-zsh.sh
 
 ulimit -n 1024
 
-export RUBY_PATH="/usr/local/Cellar/ruby/2.1.1/bin"
 export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/Users/liuenze/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-export PATH=$PATH:$HOME/bin:$RUBY_PATH
+PATH=$PATH:$HOME/bin
 export EDITOR=vi
 export M2_HOME=$HOME/Work/apache-maven-3.1.1
 export M2=$M2_HOME/bin
@@ -91,4 +90,6 @@ alias -s bz2='tar -xjvf'
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
+if which ruby >/dev/null && which gem >/dev/null; then
+  PATH="$(ruby -rubygems -e 'puts Gem.bindir'):$PATH"
+fi
