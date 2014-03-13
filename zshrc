@@ -53,8 +53,9 @@ source $ZSH/oh-my-zsh.sh
 
 ulimit -n 1024
 
-export PATH="/Users/liuenze/.rvm/gems/ruby-2.0.0-p353/bin:/Users/liuenze/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/liuenze/.rvm/rubies/ruby-2.0.0-p353/bin:/Users/liuenze/.rvm/bin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/Users/liuenze/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
-export PATH=$PATH:"/usr/local/Cellar/ruby/2.0.0-p353/bin/":$HOME/bin
+export RUBY_PATH="/usr/local/Cellar/ruby/2.1.1/bin"
+export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/Users/liuenze/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH=$PATH:$HOME/bin:$RUBY_PATH
 export EDITOR=vi
 export M2_HOME=$HOME/Work/apache-maven-3.1.1
 export M2=$M2_HOME/bin
@@ -90,5 +91,4 @@ alias -s bz2='tar -xjvf'
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
