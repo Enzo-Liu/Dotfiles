@@ -15,9 +15,9 @@ if has("gui_running")
 endif
 
 "colorTheme
-syntax enable 
+syntax enable
 set background=dark
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 colorscheme solarized
 
 "设置自定义的<leader>快捷键
