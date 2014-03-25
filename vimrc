@@ -184,6 +184,10 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 " Syntastic
 let g:syntastic_ignore_files = ['^.*ba-tgplatform.*\.java$']
 
+" Slimv
+let g:slimv_repl_split = 4 " Vertical right split buffer for output
+let g:slimv_leader = "'"
+
 " for html5
 " Disable event-handler attributes support:
 " let g:html5_event_handler_attributes_complete = 0
