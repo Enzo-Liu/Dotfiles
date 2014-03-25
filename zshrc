@@ -65,9 +65,10 @@ alias work="cd ~/Work/git"
 alias l="pwd;ls -l"
 alias la="pwd;ls -al"
 alias mysql_start="sudo /usr/local/mysql/bin/mysqld_safe &!"
+alias redis_start="/usr/local/bin/redis &!"
+alias redis_stop="sudo pkill -9 -f redis"
 alias mysql_stop="sudo pkill -9 -f mysql "
 alias stgp="grunt compress;grunt dpm-server;"
-export JAVA_HOME=$(/usr/libexec/java_home)
 alias pg_start="pg_ctl start -D $pg_home/data -l $pg_home/log.log"
 
 alias pg_stop="pg_ctl stop -D $pg_home/data"
@@ -93,3 +94,6 @@ export LC_ALL=en_US.UTF-8
 if which ruby >/dev/null && which gem >/dev/null; then
   PATH="$(ruby -rubygems -e 'puts Gem.bindir'):$PATH"
 fi
+
+PATH=$PATH:$HOME/.rvm/bin:$HOME/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM ]]

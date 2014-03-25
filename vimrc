@@ -17,7 +17,7 @@ endif
 "colorTheme
 syntax enable 
 set background=dark
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 colorscheme solarized
 
 "设置自定义的<leader>快捷键
@@ -172,12 +172,13 @@ map <leader>b :CtrlPBuffer<CR>
 
 
 "Tagbar
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_ctags_bin = '/usr/bin/ctags'
 map <leader>t :TagbarToggle<CR>
 
 " Fugitive
 map <leader>gd :Gdiff<CR>
 
+let g:slimv_leader = "'"
 " YCM--youCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
