@@ -188,6 +188,10 @@ let g:syntastic_ignore_files = ['^.*ba-tgplatform.*\.java$']
 let g:slimv_repl_split = 4 " Vertical right split buffer for output
 let g:slimv_leader = "'"
 
+"slime
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": ".1"}
+
 " for html5
 " Disable event-handler attributes support:
 " let g:html5_event_handler_attributes_complete = 0
