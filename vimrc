@@ -79,6 +79,7 @@ autocmd FileType lisp map <leader>r :!clisp %<CR>
 autocmd FileType python map <leader>r :!python %<CR>
 autocmd FileType javascript map <leader>r :!node %<CR>
 autocmd FileType yaml set shiftwidth=2 | set expandtab
+autocmd FileType java set shiftwidth=4 | set expandtab | set tabstop=4
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
