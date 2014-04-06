@@ -100,7 +100,13 @@ alias -s bz2='tar -xjvf'
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-if which ruby >/dev/null && which gem >/dev/null; then
-  PATH="$(ruby -rubygems -e 'puts Gem.bindir'):$PATH"
-fi
 
+if [ "$(uname -s)" = "Darwin" ]
+then
+  if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -rubygems -e 'puts Gem.bindir'):$PATH"
+  fi
+else
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM ]]
+fi
