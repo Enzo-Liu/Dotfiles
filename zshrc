@@ -37,7 +37,7 @@ ZSH_THEME="ys"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -53,17 +53,24 @@ source $ZSH/oh-my-zsh.sh
 
 ulimit -n 1024
 
-export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/Users/liuenze/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-PATH=$PATH:$HOME/bin
+if [ "$(uname -s)" = "Darwin" ]
+then
+  export USER_FOLDER=$HOME
+else
+  export USER_FOLDER=$HOME/host
+fi
+
+export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:$USER_FOLDER/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+PATH=$PATH:$USER_FOLDER/bin
 export EDITOR=vi
-export M2_HOME=$HOME/Work/apache-maven-3.1.1
+export M2_HOME=$USER_FOLDER/Work/apache-maven-3.1.1
 export M2=$M2_HOME/bin
-export pg_home="/Users/liuenze/Work/pg"
+export pg_home="$USER_FOLDER/Work/pg"
 alias log4a="sshpass -p 1qaz@WSX ssh enze.liu@192.168.8.172"
 alias logbeta="sshpass -p user4beta ssh betauser@192.168.211.122 -p58422"
 #alias ubuntu="sshpass -p 1qaz@WSX ssh liuenze@192.168.32.94"
-alias ubuntu="sshpass -p 1qaz@WSX ssh liuenze@10.211.55.4"
-alias work="cd ~/Work/git"
+alias ubuntu="sshpass -p vagrant ssh vagrant@10.211.55.4"
+alias work="cd $USER_FOLDER/Work/git"
 alias l="pwd;ls -l"
 alias la="pwd;ls -al"
 alias mysql_start="sudo /usr/local/mysql/bin/mysqld_safe &!"
@@ -97,5 +104,3 @@ if which ruby >/dev/null && which gem >/dev/null; then
   PATH="$(ruby -rubygems -e 'puts Gem.bindir'):$PATH"
 fi
 
-PATH=$PATH:$HOME/.rvm/bin:$HOME/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM ]]
