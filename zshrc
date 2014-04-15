@@ -60,7 +60,7 @@ else
   export USER_FOLDER=$HOME/host
 fi
 
-export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:$USER_FOLDER/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/usr/local/jdk1.7.0_51/bin:$USER_FOLDER/Work/apache-maven-3.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 PATH=$PATH:$USER_FOLDER/bin
 export EDITOR=vi
 export M2_HOME=$USER_FOLDER/Work/apache-maven-3.1.1
@@ -98,6 +98,12 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
+checkout(){
+  git fetch
+  git checkout $1
+  git pull origin $1
+}
+alias co=checkout
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
