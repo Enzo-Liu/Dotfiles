@@ -98,6 +98,12 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
+checkout(){
+  git fetch
+  git checkout $1
+  git pull origin $1
+}
+alias co=checkout
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
