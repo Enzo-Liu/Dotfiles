@@ -8,7 +8,7 @@ execute pathogen#infect()
 
 "for mvim
 if has("gui_running")
-  set go=aAce              " 去掉难看的工具栏和滑动条
+  set go=aAce        " 去掉难看的工具栏和滑动条
   set gfn=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h13
   set gfm=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h13
   set fullscreen
@@ -90,13 +90,13 @@ map <PageUp> :bp <CR>
 map <PageDown> :bn <CR>
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-au BufNewFile,BufRead Capfile	setf ruby
+au BufNewFile,BufRead Capfile  setf ruby
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
   au BufNewFile,BufRead *.prawn setfiletype ruby
 augroup end
 autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! BufReadPost * !sed -i "s/    /  /g" % && sed -i "s/ *$//g" %
+autocmd! BufReadPost * silent !sed -i --follow-symlinks "s/\t/  /g" % && sed -i --follow-symlinks "s/ *$//g" %
 
 " 热键绑定
 " "直接按 Ctrl + h 等方向键切换窗口
@@ -149,8 +149,8 @@ let NERDTreeHighlightCursorline=1
 """"""""""""""""""""""""""""""
 " airline
 """"""""""""""""""""""""""""""
-let g:airline_theme             = 'solarized'
-let g:airline_enable_branch     = 1
+let g:airline_theme       = 'solarized'
+let g:airline_enable_branch   = 1
 let g:airline_enable_syntastic  = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
