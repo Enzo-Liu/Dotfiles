@@ -96,7 +96,7 @@ augroup filetype
   au BufNewFile,BufRead *.prawn setfiletype ruby
 augroup end
 autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! BufReadPost * silent !sed -i --follow-symlinks "s/\t/  /g" % && sed -i --follow-symlinks "s/ *$//g" %
+autocmd! BufReadPost * silent %s/\t/  /ge|%s/ *$//ge|redraw!|0
 
 " 热键绑定
 " "直接按 Ctrl + h 等方向键切换窗口
