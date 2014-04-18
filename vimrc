@@ -96,7 +96,7 @@ augroup filetype
   au BufNewFile,BufRead *.prawn setfiletype ruby
 augroup end
 autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! BufReadPost * silent %s/\t/  /ge|%s/ +$//ge|redraw!|0
+autocmd! BufReadPost * silent %s/\t/  /ge | %s/ \+$//ge | redraw! | 0
 
 " 热键绑定
 " "直接按 Ctrl + h 等方向键切换窗口
@@ -180,7 +180,6 @@ map <leader>t :TagbarToggle<CR>
 " Fugitive
 map <leader>gd :Gdiff<CR>
 
-let g:slimv_leader = "'"
 " YCM--youCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
