@@ -59,9 +59,6 @@ if $TMUX == ''
   set clipboard+=unnamed
 endif
 
-" Display extra whitespace
-set list listchars=tab:»·,trail:·
-
 "设置不生成swap文件
 set noswf
 set cursorline
@@ -96,7 +93,7 @@ augroup filetype
   au BufNewFile,BufRead *.prawn setfiletype ruby
 augroup end
 autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! BufReadPost * silent %s/\t/  /ge | %s/ \+$//ge | redraw! | 0
+autocmd! bufwritepost * silent %s/\t/  /ge | %s/ \+$//ge | redraw! | 0
 
 " 热键绑定
 " "直接按 Ctrl + h 等方向键切换窗口
