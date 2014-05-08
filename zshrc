@@ -107,6 +107,11 @@ alias co=checkout
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
 if [ "$(uname -s)" = "Darwin" ]
 then
   if which ruby >/dev/null && which gem >/dev/null; then

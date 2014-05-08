@@ -93,7 +93,7 @@ augroup filetype
   au BufNewFile,BufRead *.prawn setfiletype ruby
 augroup end
 autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! bufwritepost * silent %s/\t/  /ge | %s/ \+$//ge | redraw! | 0
+autocmd! bufwritepost * silent %s/\t/  /ge | %s/ \+$//ge | redraw! 
 
 " 热键绑定
 " "直接按 Ctrl + h 等方向键切换窗口
