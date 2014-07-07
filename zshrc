@@ -121,3 +121,6 @@ else
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM ]]
 fi
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+alias cask="brew cask"
