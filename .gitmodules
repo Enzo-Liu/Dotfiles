@@ -43,3 +43,6 @@
 [submodule "vim/bundle/todo.txt-vim"]
 	path = vim/bundle/todo.txt-vim
 	url = https://github.com/freitass/todo.txt-vim
+[submodule "emacs.d"]
+	path = emacs.d
+	url = git@github.com:Enzo-Liu/emacs.d.git
