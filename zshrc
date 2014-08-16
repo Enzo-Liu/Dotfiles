@@ -84,7 +84,7 @@ alias pg_stop="pg_ctl stop -D $pg_home/data"
 alias ta="tmux attach"
 alias server="python -m SimpleHTTPServer"
 #生成tags
-alias tag="ctags -R "
+alias tag="ctags -R --tag-relative=yes -e -L"
 alias vi="vim"
 
 #默认后缀的处理
