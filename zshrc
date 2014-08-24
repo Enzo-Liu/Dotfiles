@@ -86,6 +86,7 @@ alias server="python -m SimpleHTTPServer"
 #生成tags
 alias tag="ctags -R --tag-relative=yes -e -L"
 alias vi="vim"
+alias e="emacsclient -t -a=''"
 
 #默认后缀的处理
 alias -s log=vi
