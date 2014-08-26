@@ -28,6 +28,7 @@ map <leader>q :q<CR>
 map <leader>aq :qa!<CR>
 
 set number
+set mouse=a
 set autoindent
 set smartindent
 set expandtab
