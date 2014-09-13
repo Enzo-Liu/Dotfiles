@@ -94,7 +94,7 @@ augroup filetype
   au BufNewFile,BufRead *.prawn setfiletype ruby
 augroup end
 autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! bufwritepost * silent %s/\t/  /ge | %s/ \+$//ge | redraw! 
+autocmd! bufwritepost * silent %s/\t/  /ge | %s/ \+$//ge | redraw!
 
 " 热键绑定
 " "直接按 Ctrl + h 等方向键切换窗口
@@ -105,7 +105,7 @@ nnoremap <C-l> <C-w>l
 
 " Quickly get out of insert mode without your fingers having to leave the
 " " home row (either use 'jj' or 'jk')
-inoremap jj <Esc>
+inoremap kj <Esc>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
