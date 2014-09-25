@@ -172,7 +172,7 @@ map <leader>b :CtrlPBuffer<CR>
 
 
 "Tagbar
-let g:tagbar_ctags_bin = '/usr/bin/ctags'
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 map <leader>t :TagbarToggle<CR>
 
 " Fugitive

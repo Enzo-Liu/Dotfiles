@@ -65,7 +65,6 @@ PATH=$PATH:$USER_FOLDER/bin
 export EDITOR=vi
 export M2_HOME=$USER_FOLDER/Work/apache-maven-3.1.1
 export M2=$M2_HOME/bin
-export pg_home="$USER_FOLDER/Work/pg"
 alias log4a="sshpass -p 1qaz@WSX ssh enze.liu@192.168.8.172"
 alias logbeta="sshpass -p user4beta ssh betauser@192.168.211.122 -p58422"
 #alias ubuntu="sshpass -p 1qaz@WSX ssh liuenze@192.168.32.94"
@@ -73,14 +72,7 @@ alias ubuntu="sshpass -p vagrant ssh vagrant@10.211.55.4"
 alias work="cd $USER_FOLDER/Work/git"
 alias l="pwd;ls -l"
 alias la="pwd;ls -al"
-alias mysql_start="sudo /usr/local/mysql/bin/mysqld_safe &!"
-alias redis_start="/usr/local/bin/redis &!"
-alias redis_stop="sudo pkill -9 -f redis"
-alias mysql_stop="sudo pkill -9 -f mysql "
 alias stgp="grunt compress;grunt dpm-server;"
-alias pg_start="pg_ctl start -D $pg_home/data -l $pg_home/log.log"
-
-alias pg_stop="pg_ctl stop -D $pg_home/data"
 alias ta="tmux attach"
 alias server="python -m SimpleHTTPServer"
 #生成tags
