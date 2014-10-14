@@ -17,8 +17,7 @@ endif
 "colorTheme
 syntax enable
 set background=dark
-let g:solarized_termcolors=16
-colorscheme solarized
+colorscheme base16-solarized
 
 "设置自定义的<leader>快捷键
 let mapleader=","
