@@ -119,3 +119,4 @@ fi
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 alias cask="brew cask"
+alias rswank="ssh -N -f -L 4005:127.0.0.1:4005 vps"
