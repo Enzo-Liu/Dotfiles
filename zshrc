@@ -78,7 +78,7 @@ alias server="python -m SimpleHTTPServer"
 #生成tags
 alias tag="ctags -R --tag-relative=yes -e -L"
 alias vi="vim"
-alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t -a=''"
+alias e="TERM=xterm /Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t -a=''"
 alias ge="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n"
 alias es="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 
