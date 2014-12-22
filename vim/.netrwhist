@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/liuenze/.vim'
 let g:netrw_dirhist_2='/Users/liuenze/Work/git/ba-tgplatform'
 let g:netrw_dirhist_3='/Users/liuenze/Work/git/blog'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/liuenze/Work/git/blog/_posts'
 let g:netrw_dirhist_5='/Users/liuenze/.vim'
 let g:netrw_dirhist_6='/Users/liuenze/Work/git/ba-tgplatform'
 let g:netrw_dirhist_7='/Users/liuenze/Work/git/ruby'
+let g:netrw_dirhist_8='/Users/liuenze/Work/git/hermes'
