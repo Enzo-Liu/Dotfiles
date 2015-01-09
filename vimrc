@@ -24,6 +24,8 @@ let mapleader=","
 let g:mapleader=","
 map <leader>w :w<CR>
 map <leader>q :q<CR>
+nnoremap <leader>p O<Esc>p
+
 map <leader>aq :qa!<CR>
 
 set number
