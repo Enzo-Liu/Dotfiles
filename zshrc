@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="norm"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -35,7 +35,7 @@ ZSH_THEME="ys"
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
@@ -62,6 +62,7 @@ fi
 
 export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/usr/local/jdk1.7.0_51/bin:$USER_FOLDER/Work/apache-maven-3.1.1/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 PATH=$PATH:$USER_FOLDER/bin
+export ANDROID_HOME="$USER_FOLDER/Work/andorid/android-sdk-macosx"
 export EDITOR=vi
 export M2_HOME=$USER_FOLDER/Work/apache-maven-3.1.1
 export M2=$M2_HOME/bin
@@ -97,6 +98,7 @@ checkout(){
   git pull origin $1
 }
 alias co=checkout
+alias p='ggpull && ggpush'
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
