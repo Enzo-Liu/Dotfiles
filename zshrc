@@ -67,7 +67,6 @@ export EDITOR=vi
 export M2_HOME=$USER_FOLDER/Work/apache-maven-3.1.1
 export M2=$M2_HOME/bin
 alias log4a="sshpass -p 1qaz@WSX ssh enze.liu@192.168.8.172"
-alias ubuntu="sshpass -p vagrant ssh vagrant@10.211.55.4"
 alias work="cd $USER_FOLDER/Work/git"
 alias l="pwd;ls -l"
 alias la="pwd;ls -al"
