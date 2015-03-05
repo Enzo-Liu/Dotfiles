@@ -62,6 +62,8 @@ fi
 
 export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/usr/local/jdk1.7.0_51/bin:$USER_FOLDER/Work/apache-maven-3.1.1/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 PATH=$PATH:$USER_FOLDER/bin
+#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export ANDROID_HOME="$USER_FOLDER/Work/andorid/android-sdk-macosx"
 export EDITOR=vi
 export M2_HOME=$USER_FOLDER/Work/apache-maven-3.1.1
@@ -76,7 +78,7 @@ alias server="python -m SimpleHTTPServer"
 #生成tags
 alias tag="ctags -R --tag-relative=yes -e -L"
 alias vi="vim"
-alias e="TERM=xterm /Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t -a=''"
+alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t -a=''"
 alias ge="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n"
 alias es="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 
