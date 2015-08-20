@@ -108,17 +108,7 @@ function git_prompt_info() {
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-if [ "$(uname -s)" = "Darwin" ]
-then
-  if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -rubygems -e 'puts Gem.bindir'):$PATH"
-  fi
-  alias ls='ls --color=auto'
-else
-  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM ]]
-fi
-
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 alias cask="brew cask"
 alias rswank="ssh -N -f -L 4005:127.0.0.1:4005 vps"
+source $HOME/bin/init
