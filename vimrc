@@ -16,7 +16,7 @@ endif
 
 "colorTheme
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 "set background=dark
 "colorscheme base16-solarized

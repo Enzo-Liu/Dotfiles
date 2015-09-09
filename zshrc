@@ -53,23 +53,11 @@ source $ZSH/oh-my-zsh.sh
 
 ulimit -n 1024
 
-if [ "$(uname -s)" = "Darwin" ]
-then
-  export USER_FOLDER=$HOME
-else
-  export USER_FOLDER=$HOME/host
-fi
-
-export PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:/usr/local/jdk1.7.0_51/bin:$USER_FOLDER/Work/apache-maven-3.1.1/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-PATH=$PATH:$USER_FOLDER/bin:$USER_FOLDER/.nodebrew/current/bin
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export ANDROID_HOME="$USER_FOLDER/Work/andorid/android-sdk-macosx"
-export EDITOR=vi
-export M2_HOME=$USER_FOLDER/Work/apache-maven-3.1.1
-export M2=$M2_HOME/bin
+export ANDROID_HOME="$HOME/work/andorid/android-sdk-macosx"
+export EDITOR=vim
 alias log4a="sshpass -p 1qaz@WSX ssh enze.liu@192.168.8.172"
-alias work="cd $USER_FOLDER/Work/git"
+alias work="cd $HOME/work/"
+alias ls="ls --color"
 alias l="pwd;ls -l"
 alias la="pwd;ls -al"
 alias stgp="grunt compress;grunt dpm-server;"
@@ -109,6 +97,5 @@ function git_prompt_info() {
 }
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-alias cask="brew cask"
 alias rswank="ssh -N -f -L 4005:127.0.0.1:4005 vps"
 source $HOME/bin/init
