@@ -1,0 +1,23 @@
+{
+    "usageCount": 175, 
+    "abbreviation": {
+        "wordChars": "[\\w]", 
+        "abbreviations": [], 
+        "immediate": false, 
+        "ignoreCase": false, 
+        "backspace": true, 
+        "triggerInside": false
+    }, 
+    "modes": [], 
+    "title": "browser", 
+    "hotkey": {
+        "hotKey": null, 
+        "modifiers": []
+    }, 
+    "filter": {
+        "regex": ".*Google Chrome", 
+        "isRecursive": true
+    }, 
+    "type": "folder", 
+    "showInTrayMenu": false
+}
