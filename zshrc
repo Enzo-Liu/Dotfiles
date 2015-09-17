@@ -55,12 +55,10 @@ ulimit -n 1024
 
 export ANDROID_HOME="$HOME/work/andorid/android-sdk-macosx"
 export EDITOR=vim
-alias log4a="sshpass -p 1qaz@WSX ssh enze.liu@192.168.8.172"
 alias work="cd $HOME/work/"
 alias ls="ls --color"
 alias l="pwd;ls -l"
 alias la="pwd;ls -al"
-alias stgp="grunt compress;grunt dpm-server;"
 alias ta="tmux attach"
 alias server="python -m SimpleHTTPServer"
 #生成tags

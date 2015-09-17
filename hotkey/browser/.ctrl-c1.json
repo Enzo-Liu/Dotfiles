@@ -17,11 +17,13 @@
             "<super>"
         ]
     }, 
-    "modes": [], 
+    "modes": [
+        3
+    ], 
     "showInTrayMenu": false, 
     "matchCase": false, 
     "filter": {
-        "regex": ".*Chrome", 
+        "regex": null, 
         "isRecursive": false
     }, 
     "type": "phrase", 
