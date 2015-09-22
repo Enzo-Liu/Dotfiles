@@ -64,9 +64,6 @@ alias server="python -m SimpleHTTPServer"
 #生成tags
 alias tag="ctags -R --tag-relative=yes -e -L"
 alias vi="vim"
-alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t -a=''"
-alias ge="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n"
-alias es="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 
 #默认后缀的处理
 alias -s log=vi
