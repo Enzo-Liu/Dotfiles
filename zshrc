@@ -94,3 +94,4 @@ function git_prompt_info() {
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 alias rswank="ssh -N -f -L 4005:127.0.0.1:4005 vps"
 source $HOME/bin/init
+
