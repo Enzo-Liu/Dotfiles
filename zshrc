@@ -45,7 +45,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git textmate ruby autojump)
+plugins=(git textmate ruby autojump zsh-autosuggestions)
+ZSH_CUSTOM=$HOME/Dotfiles/zsh/custom
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,5 +94,9 @@ function git_prompt_info() {
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 alias rswank="ssh -N -f -L 4005:127.0.0.1:4005 vps"
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=220'
+export ZSH_AUTOSUGGEST_STRATEGY='match_prev_cmd'
+
 source $HOME/bin/init
 
