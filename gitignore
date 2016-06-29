@@ -6,7 +6,8 @@
 *.exe
 *.o
 *.so
- 
+*.pyc
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -19,13 +20,13 @@
 *.rar
 *.tar
 *.zip
- 
+
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
- 
+
 # OS generated files #
 ######################
 .DS_Store
@@ -35,10 +36,13 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
- 
+
 # codekit #
 ###########
 .sass-cache/
 .codekit-config.json
 config.codekit
 .stack-work
+
+# emacs generated file
+SessionDesktop.el
