@@ -1,9 +1,11 @@
+TAGS
 #compiled source #
 ###################
 *.com
 *.class
 *.dll
 *.exe
+*.fasl
 *.o
 *.so
 *.pyc
