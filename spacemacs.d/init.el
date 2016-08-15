@@ -244,6 +244,8 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq custom-file "~/.spacemacs.d/custom.el")
+  (load custom-file)
   (setq-default evil-escape-key-sequence "kj"
                 dotspacemacs-default-font '("Sauce Code Powerline"
                                             :size 15
@@ -271,8 +273,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq custom-file "~/.spacemacs.d/custom.el")
-  (load custom-file)
   (require 'org-page)
   (require 'enzo-org)
   (require 'enzo-config))
