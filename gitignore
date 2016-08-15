@@ -48,3 +48,5 @@ config.codekit
 
 # emacs generated file
 SessionDesktop.el
+*.fasl
+bin
