@@ -175,9 +175,6 @@
   (interactive)
   (indent-region (point-min) (point-max)))
 
-(menu-bar-mode -1)
-(tabbar-mode -1)
-
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
