@@ -31,6 +31,7 @@ values."
      markdown
      org
      latex
+     javascript
      osx
      haskell
      ruby
