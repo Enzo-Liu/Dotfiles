@@ -181,7 +181,7 @@
 (sp-use-paredit-bindings)
 (spacemacs/set-leader-keys
   "oe" 'helm-find-files
-  "ob" 'helm-buffers-list
+  "ob" 'helm-mini
   "ok" 'kill-buffer
   "ow" 'save-buffer
   "or" 'enzo/run
