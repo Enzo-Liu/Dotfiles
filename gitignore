@@ -50,3 +50,6 @@ config.codekit
 SessionDesktop.el
 *.fasl
 bin
+
+tmp/
+Gemfile.lock
