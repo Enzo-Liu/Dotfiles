@@ -39,6 +39,10 @@ TAGS
 ehthumbs.db
 Thumbs.db
 
+# emacs temp files #
+###########
+.#*
+
 # codekit #
 ###########
 .sass-cache/
