@@ -238,7 +238,7 @@
                 (= (line-end-position) (point)))
       (re-search-forward "[[:space:]]+" nil t 1)
       (unless (= size (- (match-end 0) (match-beginning 0)))
-          (replace-match (make-string size ?\s))))))
+        (replace-match (make-string size ?\s))))))
 
 (defun nasm-indent-line ()
   "Indent current line as NASM assembly code."
