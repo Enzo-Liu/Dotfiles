@@ -229,4 +229,33 @@
           '(lambda ()
              (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)))
 
+(defun nasm-format-code-line ()
+  "Format line to distinct operator and operands"
+  (interactive)
+  (let ((size (- 10 (length  (current-word)))))
+    (right-word)
+    (unless (or (looking-at "[[:space:]]*;")
+                (= (line-end-position) (point)))
+      (re-search-forward "[[:space:]]+" nil t 1)
+      (unless (= size (- (match-end 0) (match-beginning 0)))
+          (replace-match (make-string size ?\s))))))
+
+(defun nasm-indent-line ()
+  "Indent current line as NASM assembly code."
+  (interactive)
+  (let ((orig (- (point-max) (point))))
+    (back-to-indentation)
+    (if (or (looking-at (nasm--opt nasm-directives))
+            (looking-at (nasm--opt nasm-pp-directives))
+            (looking-at "\\[")
+            (looking-at ";;+")
+            (looking-at nasm-label-regexp))
+        (indent-line-to 0)
+      (progn (indent-line-to nasm-basic-offset)
+             (unless (or (looking-at-p ";")
+                         (looking-at "[[:space:]]*$"))
+               (nasm-format-code-line))))
+    (when (> (- (point-max) orig) (point))
+      (goto-char (- (point-max) orig)))))
+
 (provide 'enzo-config)
