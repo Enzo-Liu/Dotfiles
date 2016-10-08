@@ -33,7 +33,9 @@ values."
      latex
      javascript
      osx
-     haskell
+     (haskell :variables
+              haskell-enable-hindent-style "gibiansky"
+              haskell-process-type 'stack-ghci)
      ruby
      (shell :variables
             shell-default-height 30
