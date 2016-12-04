@@ -1,6 +1,8 @@
 (add-to-list 'safe-local-variable-values '(org-beamer-outline-frame-title . "目录"))
 (setq org-src-fontify-natively t)
 (setq org-export-allow-bind-keywords t)
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "|" "SOMEDAY" "|" "DONE" )))
 
 (defvar *beamer*
   '("beamer"
