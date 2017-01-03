@@ -123,6 +123,7 @@
              ("xrightmargin" ".25in")
              ("numberstyle" "\\tiny")))
      (require 'ox-beamer)
+     (push '(png . "pngcairo") *org-babel-gnuplot-terms*)
      (dolist (class (list *article* *book* *beamer*))
        (add-to-list 'org-latex-classes
                     class))))
