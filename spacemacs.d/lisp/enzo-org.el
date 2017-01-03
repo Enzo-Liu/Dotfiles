@@ -129,7 +129,7 @@
 (setq org-confirm-babel-evaluate nil)
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((lisp . t) (plantuml . t)))
+ '((lisp . t) (plantuml . t) (gnuplot . t)))
 (setf plantuml-jar-path (expand-file-name "plantuml.jar" (file-name-directory user-init-file)))
 (setq org-plantuml-jar-path plantuml-jar-path)
 (setq org-descriptive-links nil)
