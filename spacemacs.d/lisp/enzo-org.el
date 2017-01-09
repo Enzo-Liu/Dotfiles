@@ -93,8 +93,8 @@
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
   "Acticle org export latex config.")
 
-(eval-after-load "org"
-  '(progn
+(with-eval-after-load 'org
+  (progn
      (require 'ox-md nil t)
      (require 'ox-latex)
      (setq org-latex-pdf-process
