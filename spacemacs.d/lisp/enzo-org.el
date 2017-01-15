@@ -124,7 +124,6 @@
              ("xrightmargin" ".25in")
              ("numberstyle" "\\tiny")))
      (require 'ox-beamer)
-     (push '(png . "pngcairo") *org-babel-gnuplot-terms*)
      (dolist (class (list *article* *book* *beamer*))
        (add-to-list 'org-latex-classes
                     class))))
@@ -132,6 +131,7 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((lisp . t) (plantuml . t) (gnuplot . t)))
+(push '(png . "pngcairo") *org-babel-gnuplot-terms*)
 (setf plantuml-jar-path (expand-file-name "plantuml.jar" (file-name-directory user-init-file)))
 (setq org-plantuml-jar-path plantuml-jar-path)
 (setq org-descriptive-links nil)
