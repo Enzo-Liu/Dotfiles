@@ -97,6 +97,7 @@
   (progn
      (require 'ox-md nil t)
      (require 'ox-latex)
+     (require 'ob-gnuplot)
      (setq org-latex-pdf-process
            '("xelatex -interaction nonstopmode %f"
              "xelatex -interaction nonstopmode %f"))
