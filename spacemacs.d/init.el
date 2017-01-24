@@ -70,7 +70,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(org-page pangu-spacing)
+   dotspacemacs-additional-packages '(org-page pangu-spacing meghanada groovy-mode gradle-mode)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -343,6 +343,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (require 'org-page)
   (require 'enzo-org)
+  (require 'enzo-java)
   (require 'enzo-config))
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
