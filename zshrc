@@ -54,7 +54,6 @@ source $ZSH/oh-my-zsh.sh
 
 ulimit -n 1024
 
-export ANDROID_HOME="$HOME/work/andorid/android-sdk-macosx"
 export EDITOR=vim
 alias work="cd $HOME/work/"
 alias ls="ls --color"
