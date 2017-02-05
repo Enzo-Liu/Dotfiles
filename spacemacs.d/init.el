@@ -50,7 +50,8 @@ values."
      markdown
      org
      latex
-     javascript
+     (javascript :variables
+                 js2-strict-missing-semi-warning nil)
      osx
      (haskell :variables
               haskell-enable-hindent-style "gibiansky"

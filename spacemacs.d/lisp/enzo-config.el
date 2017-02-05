@@ -173,7 +173,11 @@
 (defun indent-buffer ()
   "Use this to indent the whole file."
   (interactive)
-  (indent-region (point-min) (point-max)))
+  (pcase (file-name-extension (buffer-file-name))
+    ("js" (web-beautify-js-buffer))
+    ("css" (web-beautify-css-buffer))
+    ("html" (web-beautify-html-buffer))
+    (t (indent-region (point-min) (point-max)))))
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)

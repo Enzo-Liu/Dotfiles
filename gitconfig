@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+  name = Liu Enze
+  email = liuenze6516@gmail.com
+[pull]
+	rebase = true
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
