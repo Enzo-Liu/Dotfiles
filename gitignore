@@ -3,7 +3,6 @@ TAGS
 ###################
 *.com
 *.class
-*.dll
 *.exe
 *.fasl
 *.o

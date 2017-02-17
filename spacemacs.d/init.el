@@ -64,7 +64,7 @@ values."
                  web-mode-attr-indent-offset 2)
      osx
      (haskell :variables
-              haskell-enable-hindent-style "gibiansky"
+              haskell-enable-hindent-style "johan-tibell"
               haskell-process-type 'stack-ghci)
      ruby
      (shell :variables
