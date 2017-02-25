@@ -45,7 +45,7 @@
   "Return non-nil if string S start with BEGINS."
   (cond ((>= (length s) (length begins))
          (string-equal (substring s 0 (length begins)) begins))
-        (t nil)))
+        (_ nil)))
 
 (defun list-sub-directory (path)
   "List all the directory below PATH.  Just the first level."
@@ -86,7 +86,7 @@
            `(("OPEN" . uco-display)
              ("MARK-DONE" . uco-done)
              ("REMOVE" . uco-remove)))
-          (t `(("OPEN" . uco-display)
+          (_ `(("OPEN" . uco-display)
                ("MARK-UNDONE" . uco-undone))))))
 
 (defvar uco-helm-source-search
@@ -177,7 +177,7 @@
     ("js" (web-beautify-js-buffer))
     ("css" (web-beautify-css-buffer))
     ("html" (web-beautify-html-buffer))
-    (t (indent-region (point-min) (point-max)))))
+    (_ (indent-region (point-min) (point-max)))))
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
