@@ -326,6 +326,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq custom-file "~/.spacemacs.d/custom.el")
   (load custom-file)
+  (menu-bar-mode -1)
   (setq-default evil-escape-key-sequence "kj"
                 dotspacemacs-default-font '("Sauce Code Powerline"
                                             :size 15
