@@ -31,7 +31,10 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     scala
+     ansible
+     (scala :variables
+            ensime-startup-notification nil
+            ensime-startup-snapshot-notification nil)
      purescript
      nginx
      scheme
