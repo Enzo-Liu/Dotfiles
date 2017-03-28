@@ -3,9 +3,12 @@
 # Please adapt and uncomment the following lines:
   name = Liu Enze
   email = liuenze6516@gmail.com
+	signingkey = AB3FA040
 [pull]
 	rebase = true
 [push]
 	default = simple
 [core]
 	excludesfile = ~/.gitignore
+[gpg]
+	program = gpg2
