@@ -97,8 +97,10 @@ alias rswank="ssh -N -f -L 4005:127.0.0.1:4005 vps"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=220'
 export ZSH_AUTOSUGGEST_STRATEGY='match_prev_cmd'
 
-GPG_TTY=$(tty)
-export GPG_TTY
+export GPG_TTY=$(tty)
+if [[ -n "$SSH_CONNECTION" ]] ;then
+    export PINENTRY_USER_DATA="USE_CURSES=1"
+fi
 
 source $HOME/bin/init
 
