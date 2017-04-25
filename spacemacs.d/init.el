@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     php
      ansible
      (scala :variables
             ensime-startup-notification nil
@@ -87,7 +88,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(org-page pangu-spacing meghanada groovy-mode gradle-mode apib-mode)
+   dotspacemacs-additional-packages '(org-page pangu-spacing meghanada groovy-mode gradle-mode apib-mode (vue-mode :location (recipe :fetcher github :repo "codefalling/vue-mode")) )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -362,10 +363,12 @@ you should place your code here."
   (require 'org-page)
   (require 'enzo-org)
   (require 'enzo-java)
-  (require 'enzo-config))
+  (require 'enzo-config)
+  (use-package vue-mode)
+  )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-)
+  )
