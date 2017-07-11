@@ -57,3 +57,4 @@ bin
 
 tmp/
 Gemfile.lock
+yarn.lock
