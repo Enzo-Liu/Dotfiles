@@ -57,17 +57,7 @@ values."
      markdown
      org
      latex
-     (javascript :variables
-                 js2-strict-missing-semi-warning nil
-                 ;; js2-mode
-                 js2-basic-offset 2
-                 ;; web-mode
-                 tab-width 2
-                 css-indent-offset 2
-                 web-mode-markup-indent-offset 2
-                 web-mode-css-indent-offset 2
-                 web-mode-code-indent-offset 2
-                 web-mode-attr-indent-offset 2)
+     javascript
      osx
      (haskell :variables
               haskell-enable-hindent-style "johan-tibell"
@@ -365,6 +355,7 @@ you should place your code here."
   (require 'enzo-org)
   (require 'enzo-java)
   (require 'enzo-config)
+  (require 'enzo-js)
   (use-package vue-mode)
   )
 (defun dotspacemacs/emacs-custom-settings ()
