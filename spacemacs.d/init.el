@@ -31,6 +31,8 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     graphviz
+     plantuml
      php
      ansible
      (scala :variables
