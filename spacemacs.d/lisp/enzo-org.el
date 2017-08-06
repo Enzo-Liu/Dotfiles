@@ -130,7 +130,7 @@
 (setq org-confirm-babel-evaluate nil)
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((emacs-lisp . t) (lisp . t)  (dot . t) (plantuml . t) (gnuplot . t)))
+ '((emacs-lisp . t) (lisp . t) (ditaa . t) (dot . t) (plantuml . t) (gnuplot . t)))
 (push '(png . "pngcairo") *org-babel-gnuplot-terms*)
 (setf plantuml-jar-path (expand-file-name "plantuml.jar" (file-name-directory user-init-file)))
 (setq org-plantuml-jar-path plantuml-jar-path)

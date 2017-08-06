@@ -63,7 +63,8 @@ values."
      osx
      (haskell :variables
               haskell-enable-hindent-style "johan-tibell"
-              haskell-process-type 'stack-ghci)
+              haskell-process-type 'stack-ghci
+              haskell-process-args-stack-ghci '("--test" "--ghci-options=-ferror-spans" "--no-build" "--no-load"))
      ruby
      (shell :variables
             shell-default-height 30
@@ -343,7 +344,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
                 op/site-sub-title "M-x (sketch for random ideas)"
                 op/personal-github-link "https://github.com/Enzo-Liu"
                 op/category-ignore-list '("work" "draft"))
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/"))
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/")
+  )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
