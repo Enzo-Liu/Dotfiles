@@ -343,7 +343,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
                 op/site-main-title "enzo's note book"
                 op/site-sub-title "M-x (sketch for random ideas)"
                 op/personal-github-link "https://github.com/Enzo-Liu"
-                op/category-ignore-list '("work" "draft"))
+                op/category-ignore-list '("work" "draft")
+                op/personal-google-analytics-id "UA-104379597-1")
   (add-to-list 'load-path "~/.spacemacs.d/lisp/")
   )
 
