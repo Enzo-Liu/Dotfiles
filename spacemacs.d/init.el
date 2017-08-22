@@ -342,7 +342,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 ;;;(setq op/personal-google-analytics-id "your_google_analytics_id")
                 op/site-main-title "enzo's note book"
                 op/site-sub-title "M-x (sketch for random ideas)"
-                op/themes 'wy
+                op/theme 'wy
                 op/personal-github-link "https://github.com/Enzo-Liu"
                 op/category-ignore-list '("work" "draft" "org")
                 op/personal-google-analytics-id "UA-104379597-1")
