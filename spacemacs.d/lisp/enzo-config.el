@@ -223,7 +223,7 @@
             (with-selected-frame frame
               (enzo/setup-font 150 1.2)
               (when (and *is-a-mac* (display-graphic-p))
-                (ns-do-applescript "tell application \"Emacs\" to activate"))
+                (ns-do-applescript "tell application \"Aquamacs\" to activate"))
               )))
 
 (require 'pangu-spacing)
