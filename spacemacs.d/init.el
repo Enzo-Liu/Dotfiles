@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     go
      graphviz
      plantuml
      php
@@ -363,6 +364,7 @@ you should place your code here."
   (require 'enzo-config)
   (require 'enzo-js)
   (use-package vue-mode)
+  (require 'helm-bookmark)
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
