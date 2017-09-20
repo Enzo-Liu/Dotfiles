@@ -31,7 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     go
+     (go :variables go-tab-width 4)
      graphviz
      plantuml
      php
