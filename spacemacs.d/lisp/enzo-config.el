@@ -262,4 +262,6 @@
     (when (> (- (point-max) orig) (point))
       (goto-char (- (point-max) orig)))))
 
+(define-coding-system-alias 'UTF-8 'utf-8)
+
 (provide 'enzo-config)
