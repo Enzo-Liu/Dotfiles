@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     lua
      (go :variables go-tab-width 4)
      graphviz
      plantuml
@@ -82,7 +83,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(org-page pangu-spacing meghanada groovy-mode gradle-mode apib-mode (vue-mode :location (recipe :fetcher github :repo "codefalling/vue-mode")) )
+   dotspacemacs-additional-packages '(org-page pangu-spacing meghanada groovy-mode gradle-mode apib-mode (vue-mode :location (recipe :fetcher github :repo "codefalling/vue-mode")) ace-jump-mode)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; Defines the behaviour of Spacemacs when installing packages.
