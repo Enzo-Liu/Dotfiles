@@ -10,6 +10,7 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore
+	quotepath = off
 [gpg]
 	program = gpg2
 [commit]
