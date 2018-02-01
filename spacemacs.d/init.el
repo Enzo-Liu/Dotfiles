@@ -66,7 +66,7 @@ values."
      (haskell :variables
               haskell-enable-hindent-style "johan-tibell"
               haskell-process-type 'stack-ghci
-              haskell-process-args-stack-ghci '("--test" "--ghci-options=-ferror-spans" "--no-build" "--no-load"))
+              haskell-process-args-stack-ghci '("--test" "--ghci-options=-ferror-spans -fshow-loaded-modules" "--no-build" "--no-load" ""))
      ruby
      (shell :variables
             shell-default-height 30
