@@ -77,8 +77,25 @@
 \\usepackage{amssymb}
 \\usepackage{hyperref}
 \\usepackage{parskip}
-\\setlength{\\parindent}{15pt}
+\\setlength{\\parindent}{0pt}
 \\usepackage{indentfirst}
+\\usepackage[strict]{changepage}
+\\usepackage{framed}
+\\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\\newenvironment{formal}{%
+  \\def\\FrameCommand{%
+    \\hspace{1pt}%
+    {\\color{darkgray}\\vrule width 2pt}%
+    {\\color{formalshade}\\vrule width 2pt}%
+    \\colorbox{formalshade}%
+  }%
+  \\MakeFramed{\\advance\\hsize-\\width\\FrameRestore}%
+  \\noindent\\hspace{-2.55pt}% disable indenting first paragraph
+  \\begin{adjustwidth}{}{2pt}%
+}
+{%
+  \\vspace{2pt}\\end{adjustwidth}\\endMakeFramed%
+}
 \\geometry{a4paper, textwidth=6.5in, textheight=10in,
             marginparsep=7pt, marginparwidth=.6in}
 \\tolerance=1000
