@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+  name = v6v
+  email = hzlez@163.com
+[pull]
+	rebase = true
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+	quotepath = off

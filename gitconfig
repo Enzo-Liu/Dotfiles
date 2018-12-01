@@ -15,3 +15,9 @@
 	program = gpg2
 [commit]
   gpgsign = false
+
+[includeIf "gitdir:~/l7z/"]
+    path = ~/.l7zgitconfig
+
+[includeIf "gitdir:~/v6v/"]
+    path = ~/.v6vgitconfig
