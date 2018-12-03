@@ -52,6 +52,64 @@
     ("\\paragraph{%s}" . "\\paragraph*{%s}")
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
   "Book org export latex config.")
+(defvar *tr-article*
+  '("tr-article"
+    "\\documentclass[11pt,a4paper]{article}
+\\usepackage{fontspec}
+\\usepackage{xeCJK}
+\\setCJKmainfont[BoldFont=WenQuanYi Zen Hei Sharp,ItalicFont=WenQuanYi Micro Hei]{WenQuanYi Zen Hei}
+\\setCJKsansfont{WenQuanYi Zen Hei}
+\\setCJKmonofont{WenQuanYi Zen Hei Mono}
+\\usepackage{graphicx}
+\\usepackage{xcolor}
+\\usepackage{listings}
+\\defaultfontfeatures{Mapping=tex-text}
+\\usepackage{geometry}
+\\usepackage{verbatim}
+\\usepackage{fixltx2e}
+\\usepackage{longtable}
+\\usepackage{float}
+\\usepackage{wrapfig}
+\\usepackage{rotating}
+\\usepackage[normalem]{ulem}
+\\usepackage{amsmath}
+\\usepackage{marvosym}
+\\usepackage{wasysym}
+\\usepackage{amssymb}
+\\usepackage{hyperref}
+\\usepackage{parskip}
+\\setlength{\\parindent}{0pt}
+\\usepackage{indentfirst}
+\\usepackage[strict]{changepage}
+\\usepackage{framed}
+\\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\\newenvironment{formal}{%
+  \\def\\FrameCommand{%
+    \\hspace{1pt}%
+    {\\color{darkgray}\\vrule width 2pt}%
+    {\\color{formalshade}\\vrule width 2pt}%
+    \\colorbox{formalshade}%
+  }%
+  \\MakeFramed{\\advance\\hsize-\\width\\FrameRestore}%
+  \\noindent\\hspace{-2.55pt}% disable indenting first paragraph
+  \\begin{adjustwidth}{}{2pt}%
+}
+{%
+  \\vspace{2pt}\\end{adjustwidth}\\endMakeFramed%
+}
+\\geometry{a4paper, textwidth=6.5in, textheight=10in,
+            marginparsep=7pt, marginparwidth=.6in}
+\\tolerance=1000
+\\pagestyle{empty}
+     [NO-DEFAULT-PACKAGES]
+     [NO-PACKAGES]
+ "
+    ("\\section{%s}" . "\\section*{%s}")
+    ("\\subsection{%s}" . "\\subsection*{%s}")
+    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+    ("\\paragraph{%s}" . "\\paragraph*{%s}")
+    ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+  "Acticle org export latex config.")
 (defvar *article*
   '("article"
     "\\documentclass[11pt,a4paper]{article}
@@ -142,7 +200,7 @@
              ("xrightmargin" ".25in")
              ("numberstyle" "\\tiny")))
      (require 'ox-beamer)
-     (dolist (class (list *article* *book* *beamer*))
+     (dolist (class (list *article* *book* *beamer* *tr-article*))
        (add-to-list 'org-latex-classes
                     class))))
 (setq org-confirm-babel-evaluate nil)
