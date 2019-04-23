@@ -60,3 +60,4 @@ Gemfile.lock
 yarn.lock
 *.retry
 .meghanada
+.spacemacs.env
