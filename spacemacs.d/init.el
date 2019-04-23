@@ -61,7 +61,11 @@ This function should only modify configuration layer settings."
      emacs-lisp
      common-lisp
      git
-     markdown
+     (markdown :variables markdown-command
+               (concat
+                "/Users/enzo/.local/bin/pandoc"
+                " --from=markdown --to=html"
+                " --standalone --mathjax --highlight-style=pygments"))
      org
      latex
      javascript
@@ -81,6 +85,7 @@ This function should only modify configuration layer settings."
      html
      react
      ruby-on-rails
+     treemacs
      )
 
    ;; List of additional packages that will be installed without being

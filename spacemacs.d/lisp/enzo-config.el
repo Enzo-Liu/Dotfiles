@@ -177,6 +177,8 @@
     ("js" (web-beautify-js-buffer))
     ("css" (web-beautify-css-buffer))
     ("html" (web-beautify-html-buffer))
+    ("hs" (haskell-mode-stylish-buffer))
+    ("go" (gofmt))
     (_ (indent-region (point-min) (point-max)))))
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
