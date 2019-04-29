@@ -59,7 +59,7 @@ This function should only modify configuration layer settings."
      auto-completion
      better-defaults
      emacs-lisp
-     common-lisp
+     common-lisp-sly
      git
      (markdown :variables markdown-command
                (concat
