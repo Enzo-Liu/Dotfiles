@@ -209,7 +209,7 @@
     (let ((font (if *is-a-mac*
                     "Hiragino Sans GB"
                   "WenQuanYi Zen Hei") ))
-      (set-face-attribute 'default t :family "Sauce Code Powerline" :weight 'normal)
+      (set-face-attribute 'default t :family "Source Code Pro for Powerline" :weight 'normal)
       (set-face-attribute 'default nil :height size :weight 'normal)
       (dolist (charset '(kana han symbol cjk-misc bopomofo))
         (set-fontset-font t charset (font-spec :name font)))
@@ -218,7 +218,7 @@
 (add-hook 'org-mode-hook
           (lambda ()
             (face-remap-add-relative 'default
-                                     :family "Sauce Code Powerline")))
+                                     :family "Source Code Pro for Powerline")))
 
 (add-hook 'after-make-frame-functions
           (lambda (frame)

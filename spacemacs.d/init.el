@@ -231,7 +231,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Source Code Pro for Powerline"
                                ;; :size 13
                                :weight normal
                                :width normal
@@ -471,7 +471,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (load custom-file)
   (menu-bar-mode -1)
   (setq-default evil-escape-key-sequence "kj"
-                dotspacemacs-default-font '("Sauce Code Powerline"
+                dotspacemacs-default-font '("Source Code Pro for Powerline"
                                             :size 15
                                             :weight normal
                                             :width normal

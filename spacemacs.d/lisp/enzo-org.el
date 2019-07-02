@@ -245,4 +245,6 @@
             (setq TeX-save-query nil)
             (setq TeX-show-compilation t)))
 
+(setq org-image-actual-width 800)
+
 (provide 'enzo-org)
