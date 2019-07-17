@@ -9,9 +9,9 @@ execute pathogen#infect()
 "for mvim
 if has("gui_running")
   set go=aAce        " 去掉难看的工具栏和滑动条
-  set gfn=Sauce\ Code\ Powerline:h14
-  set gfm=Sauce\ Code\ Powerline:h14
-  set guifont=Sauce\ Code\ Powerline:h14
+  set gfn=Source\ Code\ Pro\ for\ Powerline:h14
+  set gfm=Source\ Code\ Pro\ for\ Powerline:h14
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 endif
 
 "colorTheme
