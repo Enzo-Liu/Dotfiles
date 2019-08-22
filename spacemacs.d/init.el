@@ -478,7 +478,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
                 user-full-name "enzo liu"
                 user-mail-address "liuenze6516@gmail.com"
                 op/repository-directory (substitute-in-file-name "$HOME/Documents/blog/")
-                op/site-domain "https://blog.enzo.cc/"
+                op/site-domain "http://enzo-liu.github.io"
 ;;; for commenting, you can choose either disqus or duoshuo
                 op/personal-disqus-shortname "enzo-liu"
 ;;; the configuration below are optional

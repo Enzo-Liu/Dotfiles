@@ -169,6 +169,7 @@
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
   "Acticle org export latex config.")
 
+
 (with-eval-after-load 'org
   (progn
      (require 'ox-md nil t)
@@ -202,7 +203,49 @@
      (require 'ox-beamer)
      (dolist (class (list *article* *book* *beamer* *tr-article*))
        (add-to-list 'org-latex-classes
-                    class))))
+                    class))
+     (require 'ox-publish)
+     (setq org-publish-project-alist
+           '(
+             ("org-agora-index"
+              :base-directory "~/Documents/agora/"
+              :base-extension "org"
+              :exclude ".*"
+              :include ["index.org"]
+              :publishing-directory "~/public_html/"
+              :publishing-function org-html-publish-to-html
+              :table-of-contents nil
+              :html-head-extra  "<link rel='stylesheet' type='text/css' href='styles/readtheorg/css/htmlize.css'/><link rel='stylesheet' type='text/css' href='styles/readtheorg/css/readtheorg.css'/>"
+              )
+             ("org-agora-notes"
+              :base-directory "~/Documents/agora/"
+              :base-extension "org"
+              :publishing-directory "~/public_html/"
+              :recursive t
+              :publishing-function org-html-publish-to-html
+              :headline-levels 3             ; Just the default for this project.
+              :auto-preamble t
+              :auto-sitemap t                ; Generate sitemap.org automagically...
+              :sitemap-filename "index.org"  ; ... call it sitemap.org (it's the default)...
+              :sitemap-title "Sitemap"         ; ... with title 'Sitemap'.
+              :section-numbers nil
+              :table-of-contents 2
+              :sitemap-filename "index.org"
+              :exclude "index.org"
+              :html-head-extra  "<link rel='stylesheet' type='text/css' href='../styles/readtheorg/css/htmlize.css'/><link rel='stylesheet' type='text/css' href='../styles/readtheorg/css/readtheorg.css'/>"
+              )
+             ("org-agora-static"
+              :base-directory "~/Documents/agora/"
+              :base-extension "css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
+              :publishing-directory "~/public_html/"
+              :recursive t
+              :publishing-function org-publish-attachment
+              )
+             ("org-agora" :components ("org-agora-notes" "org-agora-static" "org-agora-index" ))
+             ;; ... add all the components here (see below)...
+             ))
+
+     ))
 (setq org-confirm-babel-evaluate nil)
 (org-babel-do-load-languages
  'org-babel-load-languages

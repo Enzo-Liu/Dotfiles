@@ -42,6 +42,8 @@ Thumbs.db
 # emacs temp files #
 ###########
 .#*
+.ensime
+.ensime_cache
 
 # codekit #
 ###########
