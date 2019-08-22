@@ -487,7 +487,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
                 op/site-sub-title "M-x (sketch for random ideas)"
                 op/theme 'wy
                 op/personal-github-link "https://github.com/Enzo-Liu"
-                op/category-ignore-list '("work" "draft" "org")
+                op/category-ignore-list '("work" "draft" "org" "prod")
                 op/personal-google-analytics-id "UA-104379597-1")
   (add-to-list 'load-path "~/.spacemacs.d/lisp/")
   )
