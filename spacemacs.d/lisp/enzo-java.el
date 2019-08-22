@@ -9,16 +9,7 @@
           (lambda ()
             (gradle-mode t)))
 
-(defun my-jump-to-tag ()
-  (interactive)
-  (evil-execute-in-emacs-state)
-  (call-interactively (key-binding (kbd "M-."))))
-(define-key evil-normal-state-map (kbd "C-]") 'my-jump-to-tag)
-
-(defun my-jump-back ()
-  (interactive)
-  (evil-execute-in-emacs-state)
-  (call-interactively (key-binding (kbd "M-,"))))
-(define-key evil-normal-state-map (kbd "C-o") 'my-jump-back)
+(define-key evil-normal-state-map (kbd "C-]") (kbd "\\ M-."))
+(define-key evil-normal-state-map (kbd "C-o") (kbd "\\ M-,"))
 
 (provide 'enzo-java)
