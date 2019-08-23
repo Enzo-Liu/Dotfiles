@@ -169,6 +169,12 @@
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
   "Acticle org export latex config.")
 
+(defun my-site-format-entry (entry style project)
+  (format "[[file:%s][%s]] --- %s"
+          entry
+          (org-publish-find-title entry project)
+          (format-time-string "%Y-%m-%d" (org-publish-find-date entry project))))
+
 
 (with-eval-after-load 'org
   (progn
@@ -212,7 +218,7 @@
               :base-extension "org"
               :exclude ".*"
               :include ["index.org"]
-              :publishing-directory "~/public_html/"
+              :publishing-directory "/usr/local/var/www"
               :publishing-function org-html-publish-to-html
               :table-of-contents nil
               :html-head-extra  "<link rel='stylesheet' type='text/css' href='styles/readtheorg/css/htmlize.css'/><link rel='stylesheet' type='text/css' href='styles/readtheorg/css/readtheorg.css'/>"
@@ -220,14 +226,15 @@
              ("org-agora-notes"
               :base-directory "~/Documents/agora/"
               :base-extension "org"
-              :publishing-directory "~/public_html/"
+              :publishing-directory "/usr/local/var/www"
               :recursive t
               :publishing-function org-html-publish-to-html
               :headline-levels 3             ; Just the default for this project.
               :auto-preamble t
               :auto-sitemap t                ; Generate sitemap.org automagically...
               :sitemap-filename "index.org"  ; ... call it sitemap.org (it's the default)...
-              :sitemap-title "Sitemap"         ; ... with title 'Sitemap'.
+              :sitemap-title "文档列表"         ; ... with title 'Sitemap'.
+              :sitemap-format-entry my-site-format-entry
               :section-numbers nil
               :table-of-contents 2
               :sitemap-filename "index.org"
@@ -237,7 +244,7 @@
              ("org-agora-static"
               :base-directory "~/Documents/agora/"
               :base-extension "css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
-              :publishing-directory "~/public_html/"
+              :publishing-directory "/usr/local/var/www"
               :recursive t
               :publishing-function org-publish-attachment
               )
