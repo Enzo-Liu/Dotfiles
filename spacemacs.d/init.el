@@ -84,7 +84,6 @@ This function should only modify configuration layer settings."
      html
      react
      ruby-on-rails
-     treemacs
      )
 
    ;; List of additional packages that will be installed without being
@@ -469,6 +468,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq custom-file "~/.spacemacs.d/custom.el")
   (load custom-file)
   (menu-bar-mode -1)
+  (setq-default default-tab-width 4)
   (setq-default evil-escape-key-sequence "kj"
                 dotspacemacs-default-font '("Source Code Pro for Powerline"
                                             :size 15

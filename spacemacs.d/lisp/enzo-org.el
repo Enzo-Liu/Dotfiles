@@ -169,13 +169,6 @@
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
   "Acticle org export latex config.")
 
-(defun my-site-format-entry (entry style project)
-  (format "[[file:%s][%s]] --- %s"
-          entry
-          (org-publish-find-title entry project)
-          (format-time-string "%Y-%m-%d" (org-publish-find-date entry project))))
-
-
 (with-eval-after-load 'org
   (progn
      (require 'ox-md nil t)
@@ -234,7 +227,6 @@
               :auto-sitemap t                ; Generate sitemap.org automagically...
               :sitemap-filename "index.org"  ; ... call it sitemap.org (it's the default)...
               :sitemap-title "文档列表"         ; ... with title 'Sitemap'.
-              :sitemap-format-entry my-site-format-entry
               :section-numbers nil
               :table-of-contents 2
               :sitemap-filename "index.org"
@@ -243,7 +235,7 @@
               )
              ("org-agora-static"
               :base-directory "~/Documents/agora/"
-              :base-extension "css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
+              :base-extension "eps\\|css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
               :publishing-directory "/usr/local/var/www"
               :recursive t
               :publishing-function org-publish-attachment
@@ -260,6 +252,8 @@
 (push '(png . "pngcairo") *org-babel-gnuplot-terms*)
 (setf plantuml-jar-path (expand-file-name "plantuml.jar" (file-name-directory user-init-file)))
 (setq org-plantuml-jar-path plantuml-jar-path)
+(add-to-list 'org-babel-default-header-args:dot
+             '(:java . "-Djava.awt.headless=true"))
 (setq org-descriptive-links nil)
 
 ;; org 自动换行
