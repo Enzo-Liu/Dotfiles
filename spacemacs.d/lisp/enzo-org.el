@@ -252,7 +252,7 @@
 (push '(png . "pngcairo") *org-babel-gnuplot-terms*)
 (setf plantuml-jar-path (expand-file-name "plantuml.jar" (file-name-directory user-init-file)))
 (setq org-plantuml-jar-path plantuml-jar-path)
-(add-to-list 'org-babel-default-header-args:dot
+(add-to-list 'org-babel-default-header-args:plantuml
              '(:java . "-Djava.awt.headless=true"))
 (setq org-descriptive-links nil)
 
