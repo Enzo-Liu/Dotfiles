@@ -47,7 +47,7 @@ This function should only modify configuration layer settings."
      scheme
      octave
      sql
-     python
+     (python :variables python-backend 'anaconda)
      csv
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.

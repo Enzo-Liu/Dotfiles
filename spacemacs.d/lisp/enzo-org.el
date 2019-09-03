@@ -172,7 +172,9 @@
 (defun org-sitemap-custom-entry-format (entry style project)
   (let ((filename (org-publish-find-title entry project)))
     (if (= (length filename) 0)
-        (format "*%s*" entry)
+        (format "*%s*" (if (directory-name-p entry)
+                           (substring entry 0 (- (length entry) 1))
+                         entry))
       (format "%s - [[file:%s][%s]]"
               (format-time-string "%Y-%m-%d" (org-publish-find-date entry project))
               entry
@@ -241,12 +243,13 @@
               :section-numbers nil
               :table-of-contents 2
               :sitemap-filename "index.org"
+              :sitemap-sort-files anti-chronologically
               :exclude "index.org"
               :html-head-extra  "<link rel='stylesheet' type='text/css' href='../styles/readtheorg/css/htmlize.css'/><link rel='stylesheet' type='text/css' href='../styles/readtheorg/css/readtheorg.css'/>"
               )
              ("org-agora-static"
               :base-directory "~/Documents/agora/"
-              :base-extension "eps\\|css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
+              :base-extension "gz\\|eps\\|css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
               :publishing-directory "/usr/local/var/www"
               :recursive t
               :publishing-function org-publish-attachment
