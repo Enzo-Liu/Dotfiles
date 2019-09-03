@@ -169,6 +169,17 @@
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
   "Acticle org export latex config.")
 
+(defun org-sitemap-custom-entry-format (entry style project)
+  (let ((filename (org-publish-find-title entry project)))
+    (if (= (length filename) 0)
+        (format "*%s*" (if (directory-name-p entry)
+                           (substring entry 0 (- (length entry) 1))
+                         entry))
+      (format "%s - [[file:%s][%s]]"
+              (format-time-string "%Y-%m-%d" (org-publish-find-date entry project))
+              entry
+              filename))))
+
 (with-eval-after-load 'org
   (progn
      (require 'ox-md nil t)
@@ -226,16 +237,19 @@
               :auto-preamble t
               :auto-sitemap t                ; Generate sitemap.org automagically...
               :sitemap-filename "index.org"  ; ... call it sitemap.org (it's the default)...
+              :sitemap-format-entry org-sitemap-custom-entry-format
+              :html-link-home "/"
               :sitemap-title "文档列表"         ; ... with title 'Sitemap'.
               :section-numbers nil
               :table-of-contents 2
               :sitemap-filename "index.org"
+              :sitemap-sort-files anti-chronologically
               :exclude "index.org"
               :html-head-extra  "<link rel='stylesheet' type='text/css' href='../styles/readtheorg/css/htmlize.css'/><link rel='stylesheet' type='text/css' href='../styles/readtheorg/css/readtheorg.css'/>"
               )
              ("org-agora-static"
               :base-directory "~/Documents/agora/"
-              :base-extension "eps\\|css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
+              :base-extension "gz\\|eps\\|css\\|js\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
               :publishing-directory "/usr/local/var/www"
               :recursive t
               :publishing-function org-publish-attachment
@@ -248,7 +262,16 @@
 (setq org-confirm-babel-evaluate nil)
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((emacs-lisp . t) (lisp . t) (ditaa . t) (dot . t) (plantuml . t) (gnuplot . t) (shell . t)))
+ '((emacs-lisp . t)
+   (lisp . t)
+   (ditaa . t)
+   (dot . t)
+   (plantuml . t)
+   (gnuplot . t)
+   (shell . t)
+   (ruby . t)
+   (python . t)
+   ))
 (push '(png . "pngcairo") *org-babel-gnuplot-terms*)
 (setf plantuml-jar-path (expand-file-name "plantuml.jar" (file-name-directory user-init-file)))
 (setq org-plantuml-jar-path plantuml-jar-path)
