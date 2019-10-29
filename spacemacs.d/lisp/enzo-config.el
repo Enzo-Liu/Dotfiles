@@ -179,6 +179,7 @@
     ("html" (web-beautify-html-buffer))
     ("hs" (haskell-mode-stylish-buffer))
     ("go" (gofmt))
+    ("py" (yapfify-buffer))
     (_ (indent-region (point-min) (point-max)))))
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
@@ -265,5 +266,5 @@
       (goto-char (- (point-max) orig)))))
 
 (define-coding-system-alias 'UTF-8 'utf-8)
-
+(setq lsp-haskell-process-path-hie "hie-wrapper")
 (provide 'enzo-config)
