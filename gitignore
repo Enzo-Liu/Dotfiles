@@ -55,7 +55,7 @@ config.codekit
 # emacs generated file
 SessionDesktop.el
 *.fasl
-bin
+
 
 tmp/
 Gemfile.lock
@@ -63,3 +63,8 @@ yarn.lock
 *.retry
 .meghanada
 .spacemacs.env
+
+.classpath
+.project
+.settings
+.factorypath
