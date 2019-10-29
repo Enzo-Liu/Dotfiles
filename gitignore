@@ -62,3 +62,8 @@ yarn.lock
 *.retry
 .meghanada
 .spacemacs.env
+
+.classpath
+.project
+.settings
+.factorypath

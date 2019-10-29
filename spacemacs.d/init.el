@@ -34,6 +34,8 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     pdf-tools
+     idris
      lua
      (go :variables go-tab-width 4)
      graphviz
@@ -47,7 +49,9 @@ This function should only modify configuration layer settings."
      scheme
      octave
      sql
-     (python :variables python-backend 'anaconda)
+     (python :variables
+             python-backend 'anaconda
+             python-indent-offset 4)
      csv
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -69,6 +73,7 @@ This function should only modify configuration layer settings."
      latex
      javascript
      osx
+     lsp
      (haskell :variables
               haskell-enable-hindent-style "johan-tibell"
               haskell-process-type 'stack-ghci
