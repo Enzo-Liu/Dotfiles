@@ -34,7 +34,8 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     pdf-tools
+     coq
+     typescript
      idris
      lua
      (go :variables go-tab-width 4)
@@ -481,6 +482,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
                                             :width normal
                                             :powerline-scale 1.1)
                 user-full-name "enzo liu"
+                lsp-ui-doc-enable nil
+                read-process-output-max (* 1024 1024)
                 user-mail-address "liuenze6516@gmail.com"
                 op/repository-directory (substitute-in-file-name "$HOME/Documents/blog/")
                 op/site-domain "http://enzo-liu.github.io"

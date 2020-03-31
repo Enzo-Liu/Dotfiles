@@ -265,6 +265,16 @@
     (when (> (- (point-max) orig) (point))
       (goto-char (- (point-max) orig)))))
 
+(with-eval-after-load 'python
+  (defun python-shell-completion-native-try ()
+    "Return non-nil if can trigger native completion."
+    (let ((python-shell-completion-native-enable t)
+          (python-shell-completion-native-output-timeout
+           python-shell-completion-native-try-output-timeout))
+      (python-shell-completion-native-get-completions
+       (get-buffer-process (current-buffer))
+       nil "_"))))
+
 (define-coding-system-alias 'UTF-8 'utf-8)
 (setq lsp-haskell-process-path-hie "hie-wrapper")
 (provide 'enzo-config)

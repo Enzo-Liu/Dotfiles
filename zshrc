@@ -56,9 +56,9 @@ ulimit -n 1024
 
 export EDITOR=vim
 alias work="cd $HOME/work/"
-alias ls="ls --color"
-alias l="pwd;ls -l"
-alias la="pwd;ls -al"
+alias ls="ls -h --color"
+alias l="pwd;ls -lh"
+alias la="pwd;ls -alh"
 alias ta="tmux attach"
 alias server="python -m SimpleHTTPServer"
 #生成tags
@@ -104,3 +104,7 @@ fi
 
 source $HOME/bin/init
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
