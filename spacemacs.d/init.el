@@ -42,9 +42,7 @@ This function should only modify configuration layer settings."
      graphviz
      plantuml
      php
-     (scala :variables
-            ensime-startup-notification nil
-            ensime-startup-snapshot-notification nil)
+     (scala :variables scala-backend 'scala-metals)
      purescript
      nginx
      scheme
