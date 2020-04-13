@@ -314,4 +314,33 @@
 
 (setq org-image-actual-width 800)
 
+(defun todoToNum (s)
+  (cond
+   ((string= s"DOING") 1)
+   ((string= s "TODO") 2)
+   ((string= s "DONE") 3)
+   ((string= s"SOMEDAY") 4)
+   (t 5)
+    )
+  )
+(defun headToTbl ()
+  (interactive)
+  (let (items)
+    (org-map-entries (lambda ()
+                       (let (
+                             (item (org-entry-get nil "ITEM"))
+                             (todo (org-entry-get nil "TODO"))
+                             (scheduled (org-entry-get nil "SCHEDULED"))
+                             (closed (org-entry-get nil "CLOSED"))
+                             )
+                         (push (list item todo scheduled closed) items))) "TODO<>\"\"")
+    (setq-local items (sort items (lambda (a b)
+                                    (print (todoToNum (nth 1 a)))
+                                    (< (todoToNum (nth 1 a))
+                                       (todoToNum (nth 1 b))))))
+    (push 'hline items)
+    (push (list "task" "status" "scheduled" "closed") items)
+    items)
+  )
+
 (provide 'enzo-org)
