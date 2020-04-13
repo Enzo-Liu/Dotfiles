@@ -333,7 +333,7 @@
                              (scheduled (org-entry-get nil "SCHEDULED"))
                              (closed (org-entry-get nil "CLOSED"))
                              )
-                         (push (list item todo scheduled closed) items))) "TODO<>\"\"")
+                         (push (list (concat "[[*" item "]]") todo scheduled closed) items))) "TODO<>\"\"")
     (setq-local items (sort items (lambda (a b)
                                     (print (todoToNum (nth 1 a)))
                                     (< (todoToNum (nth 1 a))
