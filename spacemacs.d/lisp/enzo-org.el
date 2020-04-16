@@ -333,7 +333,9 @@
                              (scheduled (org-entry-get nil "SCHEDULED"))
                              (closed (org-entry-get nil "CLOSED"))
                              )
-                         (push (list (concat "[[*" item "]]")
+                         (push (list (concat "[[*"
+                                             (replace-regexp-in-string "^\\[[[:digit:]]*/[[:digit:]]*\\] " "" item)
+                                             "]]")
                                      todo
                                      (if scheduled
                                          (replace-regexp-in-string "[<>]" "" scheduled)
@@ -342,7 +344,6 @@
                                items)))
                      "TODO<>\"\"")
     (setq-local items (sort items (lambda (a b)
-                                    (print (todoToNum (nth 1 a)))
                                     (< (todoToNum (nth 1 a))
                                        (todoToNum (nth 1 b))))))
     (push 'hline items)
