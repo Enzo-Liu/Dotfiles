@@ -33,7 +33,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(clojure
      coq
      typescript
      idris
@@ -88,6 +88,7 @@ This function should only modify configuration layer settings."
      html
      react
      ruby-on-rails
+     (c-c++ :variables c-c++-backend 'lsp-clangd)
      )
 
    ;; List of additional packages that will be installed without being

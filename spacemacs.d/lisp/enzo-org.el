@@ -115,6 +115,7 @@
     "\\documentclass[11pt,a4paper]{article}
 \\usepackage{fontspec}
 \\usepackage{xeCJK}
+\\xeCJKsetup{CJKmath=true}
 \\setCJKmainfont[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolKai-Regular.otf]{FandolSong-Regular.otf}
 \\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
 \\setCJKmonofont{FandolFang-Regular.otf}
