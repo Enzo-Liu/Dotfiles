@@ -108,3 +108,6 @@ source $HOME/bin/init
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f "/Users/lez/.ghcup/env" ] && source "/Users/lez/.ghcup/env" # ghcup-env
+if [ -e /Users/lez/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/lez/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+eval "$(direnv hook zsh)"

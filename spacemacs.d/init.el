@@ -65,7 +65,7 @@ This function should only modify configuration layer settings."
      git
      (markdown :variables markdown-command
                (concat
-                "/Users/enzo/.local/bin/pandoc"
+                "~/.local/bin/pandoc"
                 " --from=markdown --to=html"
                 " --standalone --mathjax --highlight-style=pygments"))
      org
@@ -95,7 +95,7 @@ This function should only modify configuration layer settings."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(org-page pangu-spacing meghanada groovy-mode gradle-mode apib-mode (vue-mode :location (recipe :fetcher github :repo "codefalling/vue-mode")) ace-jump-mode shakespeare-mode)
+   dotspacemacs-additional-packages '(org-page pangu-spacing meghanada groovy-mode gradle-mode apib-mode (vue-mode :location (recipe :fetcher github :repo "codefalling/vue-mode")) ace-jump-mode shakespeare-mode direnv)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
 
